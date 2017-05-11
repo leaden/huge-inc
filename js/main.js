@@ -4,3 +4,5 @@ document.getElementById("toggle").addEventListener("click", function(event){
 	document.getElementById("body").classList.toggle("overflow-hidden");
 
 });
+
+var currentScroll = window.pageYOffset || document.body.scrollTop;

@@ -42,6 +42,26 @@ nav{
 	transition: all 0.3s;
 }
 
+.menu:before, .menu:after{
+	content: '';
+	display: block;
+	width: 24px;
+	height: 4px;
+	background: #ec008c;
+	position: absolute;
+	z-index: -1;
+
+}
+
+.menu:before{
+	top: -8px;
+}
+
+.menu:after{
+	top: 8px;
+}
+
+
 #toggle:hover  .menu:before {
 	top: 9px;
 }
@@ -87,4 +107,48 @@ nav.open{
 
 nav.ul {
 	top: -10%
+	padding:0;
+	opacity: 0;
+	width: 100%;
+	text-align: center;
+	visibility: hidden;
+	display: table-cell;
+	vertical-align: middle;
+	transform: perspective(600px) rotateX(10deg);
+	transition: all 0.5s cubic-bezier(0.7,0,0.36,0.63);
+
 }
+
+nav ul li{
+	visibility: hidden;
+}
+
+nav ul li a{
+	color:white;
+	width: 100%;
+	display: block; 
+	padding: 8px 0 0;
+	letter-spacing: -0.06em;
+}
+
+nav ul li a:hover{
+	color:#ec008c;
+	background-color: white;
+
+}
+
+nav.open ul {
+	top: 0;
+	opacity: 1;
+	margin-top: 0;
+	visibility: visible;
+	transform: perspective(600px) rotateX(0deg);
+}
+
+nav.open ul li {
+	color:#fff;
+	font-size: 60px;
+	visibility: visible !important;
+
+}
+
